@@ -1,9 +1,5 @@
-# importing game file from the logic.py
-from logic import Game
-
-
-# creating object of Game class
-obj = Game()
+# importing functions from logic.py
+from logic import add, read, delete
 
 print("WELCOME TO TOPS QUIZ GAME CHALLENGE")
 
@@ -20,30 +16,28 @@ menu = """
     press 5 for exit
     """
 
-
 # while loop for choice from the menu
 while True:
-        print(menu)
-        c = int(input("Which operation would you like to perform: "))
-        
-        if c == 1:
-            obj.add()
-           
-        elif c == 2:
-            obj.read()
-           
-        elif c == 3:
-            obj.delete()
+    print(menu)
+    c = int(input("Which operation would you like to perform: "))
+    
+    if c == 1:
+        add()
+       
+    elif c == 2:
+        read()
+       
+    elif c == 3:
+        delete()
 
-        elif c == 4:
-            print("Welcome quiz cracker\n")
-            obj.read()
+    elif c == 4:
+        print("Welcome quiz cracker\n")
+        print("Here are some questions\n")
+        read()
 
+    elif c == 5:
+        print("Thank you for using our app!!")
+        break
 
-        elif c == 5:
-            print("Thank you for using our app!!")
-            break
-
-        else:
-            print("Invalid option, please try again.")
-
+    else:
+        print("Invalid option, please try again.")
